@@ -1,6 +1,41 @@
-h1 {
-    color: rgb(42, 165, 42);
+:root {
+    --font--family: 'Rosario', sans-serif;
+
+    --color--h1: #599635;
 }
-h2{
+html {
+    font-size: 16px;
+}
+body {
+    font-family: var(--font--family);
+    line-height: 1.5;
+}
+h1 {
+    color: var(--color--h1);
+    font-size: 50px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.7em;
+}
+header {
+    display: block;
+    padding: 1em;
+    background-color: rgb(216, 216, 216);
+}
+.rosado {
     color: hotpink;
+}
+h2 {
+    font-weight: 500;
+}
+.parrafos {
+    text-align: left;
+}
+button {
+    padding: 1rem;
+    background-color: transparent;
+    font-family: var(--font--family);
+    font-weight: 700;
+    font-size: 1rem;
+    border: 1px solid violet;
 }
