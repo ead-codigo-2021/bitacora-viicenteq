@@ -1,26 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+/*Raiz*/
 :root {
     --font--family: 'Rosario', sans-serif;
 
     --color--h1: #599635;
+    --max-width-container: 1000px;
 }
 html {
     font-size: 16px;
 }
+/* Body*/ 
 body {
     font-family: var(--font--family);
     line-height: 1.5;
+    background-color: rgb(64, 120, 224);
 }
+.site-header {
+    display: block;
+    padding: 1em;
+    background-color: rgb(216, 216, 216);
+}
+.container {
+    max-width: var(--max-width-container);
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.site-navigation {
+    font-size: 1.5rem;
+    justify-content: space-evenly;
+    display: flex;
+}
+.site-navigation a {
+    display: flex;
+    flex-basis: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: .75rem 2rem;
+    font-size: .85rem;
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: center;
+    text-decoration: none;
+    color: var(--color-white);
+    background-color: var(--color-dark);
+    border: 1px solid currentColor;
+    order: 1;
+}
+.site-navigation a:hover {
+    color: var(--color-dark);
+    background-color: var(--color-white);
+    border-color: var(--color-white)
+}
+/*Estilos de texto*/
 h1 {
     color: var(--color--h1);
     font-size: 50px;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.7em;
-}
-header {
-    display: block;
-    padding: 1em;
-    background-color: rgb(216, 216, 216);
+    letter-spacing: 0.3em;
+    text-align: left;
 }
 .rosado {
     color: hotpink;
@@ -30,6 +72,7 @@ h2 {
 }
 .parrafos {
     text-align: left;
+    font-weight: 300;
 }
 button {
     padding: 1rem;
@@ -38,4 +81,11 @@ button {
     font-weight: 700;
     font-size: 1rem;
     border: 1px solid violet;
+}
+.imgpinguinos {
+    
+}
+.site-footer {
+    padding: 2rem;
+    background-color: rgb(216, 216, 216);
 }
