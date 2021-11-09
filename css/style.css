@@ -5,8 +5,9 @@
 /*Raiz*/
 :root {
     --font--family: 'Rosario', sans-serif;
+    --background--color: rgb(188, 172, 226);
 
-    --color--h1: #6d4291;
+    --color--darkpurple: #6d4291;
     --max-width-container: 1000px;
 }
 html {
@@ -14,20 +15,25 @@ html {
 }
 /* Body*/ 
 body {
-    display: grid;
-    grid-template-columns: auto 1000px auto;
-    grid-template-areas: 'margin1 main margin2';
     font-family: var(--font--family);
     line-height: 1.5;
-    background-color: rgb(188, 172, 226);
+    background-color: var(--background--color);
 }
 .container {
-   
+    display: grid;
+    grid-template-columns: 1fr 6fr 1fr;
+    grid-template-areas: 'margin-one main margin-two'
+    'footer-side-a footer footer-side-b';
+    }
+.main {
+    grid-area: main;
 }
 .site-navigation {
+    grid-area: menu;
     font-size: 1.5rem;
     justify-content: space-evenly;
     display: flex;
+    padding-bottom: 1rem;
 }
 .site-navigation a {
     display: flex;
@@ -40,47 +46,71 @@ body {
     line-height: 1.2;
     text-align: center;
     text-decoration: none;
-    color: var(--color-white);
-    background-color: var(--color-dark);
+    color: var(--background--color);
+    background-color: var(--color--darkpurple);
     border: 1px solid currentColor;
     order: 1;
 }
 .site-navigation a:hover {
-    color: var(--color-dark);
-    background-color: var(--color-white);
-    border-color: var(--color-white)
+    color: var(--color--darkpurple);
+    background-color: var(--background--color);
+    border-color: var(--background--color);
 }
+.site-footer {
+    grid-area: footer;
+    font-family: var(--font--family);
+    color: var(--background--color);
+    padding: 2rem;
+    background-color: var(--color--darkpurple);
+}
+.presentation {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'mytext imagen';
+    grid-column-gap: 50px;
+}
+.mytext {
+    grid-area: mytext;
+    padding-top: 15%;
+    padding-bottom: 15%;
+}
+
 /*Estilos de texto*/
 h1 {
-    color: var(--color--h1);
+    color: var(--color--darkpurple);
     font-size: 50px;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.3em;
+    letter-spacing: 0.525em;
     text-align: left;
-}
-.rosado {
-    color: hotpink;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 h2 {
     font-weight: 500;
+    color: var(--color--darkpurple);
+}
+h3 {
+    color: var(--color--darkpurple)
 }
 .parrafos {
     text-align: left;
     font-weight: 300;
 }
-button {
+.button-teamo {
     padding: 1rem;
+    color: var(--color--darkpurple);
     background-color: transparent;
     font-family: var(--font--family);
     font-weight: 700;
     font-size: 1rem;
-    border: 1px solid violet;
+    border: 1px solid var(--color--darkpurple);
+
 }
-.imgpinguinos {
-    
-}
-.site-footer {
-    padding: 2rem;
-    background-color: rgb(216, 216, 216);
+.principal-img {
+    grid-area: imagen;
+    width: 100%; 
+    height: auto;
+    padding-top: 15%;
+    padding-bottom: 15%;
 }
