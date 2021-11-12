@@ -23,17 +23,17 @@ body {
     display: grid;
     grid-template-columns: 1fr 6fr 1fr;
     grid-template-areas: 'margin-one main margin-two'
-    'footer-side-a footer footer-side-b';
+    'footer footer footer';
     }
 .main {
     grid-area: main;
+    padding-bottom: 2rem;
 }
 .site-navigation {
     grid-area: menu;
     font-size: 1.5rem;
     justify-content: space-evenly;
     display: flex;
-    padding-bottom: 1rem;
 }
 .site-navigation a {
     display: flex;
