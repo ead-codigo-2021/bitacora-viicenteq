@@ -27,16 +27,17 @@ body {
     }
 .main {
     grid-area: main;
-    padding-bottom: 2rem;
 }
 .site-navigation {
     grid-area: menu;
     font-size: 1.5rem;
     justify-content: space-evenly;
     display: flex;
+    width: 100%;
 }
 .site-navigation a {
     display: flex;
+    width: 100%;
     flex-basis: 100%;
     justify-content: center;
     align-items: center;
@@ -49,30 +50,33 @@ body {
     color: var(--background--color);
     background-color: var(--color--darkpurple);
     border: 1px solid currentColor;
-    order: 1;
+    order: 1; 
 }
 .site-navigation a:hover {
     color: var(--color--darkpurple);
     background-color: var(--background--color);
     border-color: var(--background--color);
 }
-.site-footer {
-    grid-area: footer;
-    font-family: var(--font--family);
-    color: var(--background--color);
-    padding: 2rem;
-    background-color: var(--color--darkpurple);
-}
+@media (min-width: 700px) {
 .presentation {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: 'mytext imagen';
     grid-column-gap: 50px;
 }
+}
 .mytext {
     grid-area: mytext;
     padding-top: 15%;
     padding-bottom: 15%;
+}
+.site-footer {
+    grid-area: footer;
+    font-family: var(--font--family);
+    color: var(--background--color);
+    padding: 2rem;
+    margin-top: 2rem;
+    background-color: var(--color--darkpurple);
 }
 
 /*Estilos de texto*/
@@ -89,9 +93,11 @@ h1 {
 h2 {
     font-weight: 500;
     color: var(--color--darkpurple);
+    padding-bottom: 1.5rem;
 }
 h3 {
-    color: var(--color--darkpurple)
+    color: var(--color--darkpurple);
+    padding-bottom: 1.5rem;
 }
 .parrafos {
     text-align: left;
