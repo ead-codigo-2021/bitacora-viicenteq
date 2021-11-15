@@ -29,8 +29,8 @@ body {
     grid-area: main;
 }
 .site-navigation {
-    grid-area: menu;
-    font-size: 1.5rem;
+    padding-top: 2rem;
+    grid-area: main;
     justify-content: space-evenly;
     display: flex;
     width: 100%;
@@ -64,11 +64,33 @@ body {
     grid-template-areas: 'mytext imagen';
     grid-column-gap: 50px;
 }
+.prin-text {
+    grid-area: prin-text;
+    padding-bottom: 25%;
+}
+.presentation-prin {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'prin-text class-title';
+    grid-column-gap: 50px;
+    align-items: center;
+    border-bottom: 1px solid var(--color--darkpurple);
+    padding-top: 15%;
 }
 .mytext {
     grid-area: mytext;
     padding-top: 15%;
     padding-bottom: 15%;
+}
+.class-title {
+    grid-area: class-title;
+    text-align: center;
+    color: var(--color--darkpurple);
+    font-size: 50px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding-top: 2rem;
+    padding-bottom: 25%;
 }
 .site-footer {
     grid-area: footer;
@@ -77,6 +99,20 @@ body {
     padding: 2rem;
     margin-top: 2rem;
     background-color: var(--color--darkpurple);
+}
+.deep-footer {
+    display: flex;
+    justify-content: space-evenly;
+}
+.content-footer {
+    text-align: center;
+}
+
+.content-footer  h4{
+    color: var(--background--color);
+    border-bottom: .5px solid var(--background--color);
+    padding-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 /*Estilos de texto*/
@@ -87,8 +123,20 @@ h1 {
     text-transform: uppercase;
     letter-spacing: 0.525em;
     text-align: left;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+.prin-title {
+    color: var(--color--darkpurple);
+    font-size: 60px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.525em;
+    text-align: center;
+    align-self: center;
+    padding-top: 20%;
+    padding-bottom: 25%;
+    border-bottom: 1px solid var(--color--darkpurple);
 }
 h2 {
     font-weight: 500;
@@ -119,4 +167,5 @@ h3 {
     height: auto;
     padding-top: 15%;
     padding-bottom: 15%;
+}
 }

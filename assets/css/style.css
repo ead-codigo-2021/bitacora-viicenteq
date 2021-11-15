@@ -1,0 +1,196 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+/*Raiz*/
+:root {
+    --font--family: 'Rosario', sans-serif;
+    --background--color: rgb(188, 172, 226);
+
+    --color--darkpurple: #6d4291;
+    --max-width-container: 1000px;
+}
+html {
+    font-size: 16px;
+}
+/* Body*/ 
+body {
+    font-family: var(--font--family);
+    line-height: 1.5;
+    background-color: var(--background--color);
+}
+.container {
+    display: grid;
+    grid-template-columns: 1fr 6fr 1fr;
+    grid-template-areas: 'margin-one main margin-two'
+    'footer footer footer';
+    }
+.main {
+    grid-area: main;
+}
+.site-navigation {
+    grid-area: main;
+    width: 100%;
+}
+.view-one {
+    min-height: 100vh;
+}
+.site-navigation-menu {
+    grid-area: main;
+    justify-content: space-evenly;
+    display: flex;
+    width: 100%;
+    padding-top: 2rem;
+}
+.prin-title {
+    color: var(--color--darkpurple);
+    font-size: 60px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.525em;
+    text-align: center;
+    align-self: center;
+    padding-top: 15%;
+    padding-bottom: 15%;
+    border-bottom: 1px solid var(--color--darkpurple);
+}
+.site-navigation a {
+    display: flex;
+    width: 100%;
+    flex-basis: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: .75rem 2rem;
+    font-size: .85rem;
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: center;
+    text-decoration: none;
+    color: var(--background--color);
+    background-color: var(--color--darkpurple);
+    border: 1px solid currentColor;
+    order: 1; 
+}
+.site-navigation a:hover {
+    color: var(--color--darkpurple);
+    background-color: var(--background--color);
+    border-color: var(--background--color);
+}
+@media (min-width: 700px) {
+.presentation-prin {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 'prin-text class-title';
+        grid-column-gap: 50px;
+        align-items: center;
+        border-bottom: 1px solid var(--color--darkpurple);
+    }
+.presentation-prin-contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'prin-text class-title';
+    grid-column-gap: 50px;
+    align-items: center;
+    border-bottom: 1px solid var(--color--darkpurple);
+    padding-top: 10%;
+    }
+.presentation {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 'mytext imagen';
+        grid-column-gap: 50px;
+    }
+}
+.mytext {
+    grid-area: mytext;
+    padding-top: 15%;
+    padding-bottom: 15%;
+}
+.prin-text {
+    grid-area: prin-text;
+    padding-bottom: 25%;
+}
+.class-title {
+    grid-area: class-title;
+    text-align: center;
+    color: var(--color--darkpurple);
+    font-size: 50px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding-top: 2rem;
+    padding-bottom: 25%;
+}
+.class-title-contact {
+    grid-area: prin-text;
+    text-align: center;
+    color: var(--color--darkpurple);
+    font-size: 50px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding-top: 2rem;
+    padding-bottom: 25%;
+}
+.site-footer {
+    grid-area: footer;
+    font-family: var(--font--family);
+    color: var(--background--color);
+    padding: 2rem;
+    margin-top: 2rem;
+    background-color: var(--color--darkpurple);
+}
+.deep-footer {
+    display: flex;
+    justify-content: space-evenly;
+}
+.content-footer {
+    text-align: center;
+}
+
+.content-footer  h4{
+    color: var(--background--color);
+    border-bottom: .5px solid var(--background--color);
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+/*Estilos de texto*/
+h1 {
+    color: var(--color--darkpurple);
+    font-size: 50px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.525em;
+    text-align: left;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+h2 {
+    font-weight: 500;
+    color: var(--color--darkpurple);
+    padding-bottom: 1.5rem;
+}
+h3 {
+    color: var(--color--darkpurple);
+    padding-bottom: 1.5rem;
+}
+.parrafos {
+    text-align: left;
+    font-weight: 300;
+}
+.button-teamo {
+    padding: 1rem;
+    color: var(--color--darkpurple);
+    background-color: transparent;
+    font-family: var(--font--family);
+    font-weight: 700;
+    font-size: 1rem;
+    border: 1px solid var(--color--darkpurple);
+
+}
+.principal-img {
+    grid-area: imagen;
+    width: 100%; 
+    height: auto;
+    padding-top: 15%;
+    padding-bottom: 15%;
+}

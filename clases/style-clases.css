@@ -1,0 +1,213 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+/*Raiz*/
+:root {
+    --font--family: 'Rosario', sans-serif;
+    --background--color: rgb(188, 172, 226);
+
+    --color--darkpurple: #6d4291;
+    --max-width-container: 1000px;
+}
+html {
+    font-size: 16px;
+}
+/* Body*/ 
+body {
+    font-family: var(--font--family);
+    line-height: 1.5;
+    background-color: var(--background--color);
+}
+.container {
+    display: grid;
+    grid-template-columns: 1fr 6fr 1fr;
+    grid-template-areas: 'margin-one main margin-two'
+    'footer footer footer';
+    }
+.main {
+    grid-area: main;
+}
+.content-main {
+    padding-top: 2rem;
+}
+.site-navigation {
+    grid-area: menu;
+    font-size: 1.5rem;
+    justify-content: space-evenly;
+    display: flex;
+    width: 100%;
+}
+.site-navigation a {
+    display: flex;
+    width: 100%;
+    flex-basis: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: .75rem 2rem;
+    font-size: .85rem;
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: center;
+    text-decoration: none;
+    color: var(--background--color);
+    background-color: var(--color--darkpurple);
+    border: 1px solid currentColor;
+    order: 1; 
+}
+.site-navigation a:hover {
+    color: var(--color--darkpurple);
+    background-color: var(--background--color);
+    border-color: var(--background--color);
+}
+@media (min-width: 700px) {
+.presentation {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'mytext imagen';
+    grid-column-gap: 50px;
+}
+}
+.mytext {
+    grid-area: mytext;
+    padding-top: 15%;
+    padding-bottom: 15%;
+}
+.site-footer {
+    grid-area: footer;
+    font-family: var(--font--family);
+    color: var(--background--color);
+    padding: 2rem;
+    margin-top: 2rem;
+    background-color: var(--color--darkpurple);
+}
+.deep-footer {
+    display: flex;
+    justify-content: space-evenly;
+}
+.content-footer {
+    text-align: center;
+}
+
+.content-footer  h4{
+    color: var(--background--color);
+    border-bottom: .5px solid var(--background--color);
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+/*Estilos de texto*/
+h1 {
+    color: var(--color--darkpurple);
+    font-size: 50px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.525em;
+    text-align: left;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+h2 {
+    font-weight: 500;
+    color: var(--color--darkpurple);
+    padding-bottom: 1.5rem;
+}
+h3 {
+    color: var(--color--darkpurple);
+    padding-bottom: 1.5rem;
+}
+.parrafos {
+    text-align: left;
+    font-weight: 300;
+}
+.button-teamo {
+    padding: 1rem;
+    color: var(--color--darkpurple);
+    background-color: transparent;
+    font-family: var(--font--family);
+    font-weight: 700;
+    font-size: 1rem;
+    border: 1px solid var(--color--darkpurple);
+
+}
+.principal-img {
+    grid-area: imagen;
+    width: 100%; 
+    height: auto;
+    padding-top: 15%;
+    padding-bottom: 15%;
+}
+
+/*Cards*/
+.container-card{
+	width: 100%;
+	display: flex;
+	max-width: 1100px;
+	margin: auto;
+}
+.title-cards{
+	width: 100%;
+	max-width: 1080px;
+	margin: auto;
+	padding: 20px;
+	margin-top: 20px;
+	text-align: center;
+	color: var(--background--color);
+}
+.card{
+	width: 100%;
+	margin: 20px;
+	border-radius: 6px;
+	overflow: hidden;
+	background: var(--color--darkpurple);
+	box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
+	transition: all 400ms ease-out;
+	cursor: default;
+}
+.card-links {
+    grid-area: main;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.card:hover{
+	box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
+	transform: translateY(-3%);
+}
+.card .contenido-card{
+	padding: 15px;
+	text-align: center;
+}
+.card .contenido-card h3{
+	margin-bottom: 15px;
+	color: var(--background--color);
+}
+.card .contenido-card p{
+	line-height: 1.8;
+	color: var(--background--color);
+	font-size: 14px;
+	margin-bottom: 5px;
+}
+.card .contenido-card a{
+	display: inline-block;
+	padding: 10px;
+	margin-top: 10px;
+	text-decoration: none;
+	color: var(--background--color);
+	border: 1px solid var(--background--color);
+	border-radius: 4px;
+	transition: all 400ms ease;
+	margin-bottom: 5px;
+}
+.card .contenido-card a:hover{
+	background: var(--background--color);
+	color:var(--color--darkpurple);
+}
+@media only screen  and (max-width:768px){
+	.container-card{
+		flex-wrap: wrap;
+	}
+	.card{
+		margin: 15px;
+	}
+}
