@@ -83,7 +83,6 @@ body {
         grid-template-areas: 'prin-text class-title';
         grid-column-gap: 50px;
         align-items: center;
-        border-bottom: 1px solid var(--color--darkpurple);
     }
 .presentation-prin-contact {
     display: grid;
@@ -91,7 +90,6 @@ body {
     grid-template-areas: 'prin-text class-title';
     grid-column-gap: 50px;
     align-items: center;
-    border-bottom: 1px solid var(--color--darkpurple);
     padding-top: 10%;
     }
 .presentation {
@@ -109,16 +107,23 @@ body {
 .prin-text {
     grid-area: prin-text;
     padding-bottom: 25%;
-}
-.class-title {
-    grid-area: class-title;
     text-align: center;
     color: var(--color--darkpurple);
     font-size: 50px;
     font-weight: 700;
     text-transform: uppercase;
-    padding-top: 2rem;
-    padding-bottom: 25%;
+    border-right: 1px solid var(--color--darkpurple);
+    padding-bottom: 2rem;
+}
+.class-title {
+    grid-area: class-title;
+    text-align: center;
+    color: var(--color--darkpurple);
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding-bottom: 2rem;
+
 }
 .class-title-contact {
     grid-area: prin-text;

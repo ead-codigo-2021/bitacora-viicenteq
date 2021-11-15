@@ -159,9 +159,9 @@ body {
 }
 
 .slide-control {
-    background: transparent;
+    background: var(--color--darkpurple);
     border-radius: 50%;
-    color: var(--color--darkpurple);
+    color: var(--background--color);
     cursor: pointer;
     display: none;
     font-size: 40px;
